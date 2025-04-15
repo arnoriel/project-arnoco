@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Arnoco - Stylish Men's Fashion</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background: #000;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 10px;
+            font-size: 12px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ccc;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?q=80&w=2071&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            animation: fadeIn 2s ease;
+        }
+
+        .hero-content h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: slideUp 1s ease;
+        }
+
+        .hero-content p {
+            font-size: 14px;
+            margin-bottom: 20px;
+            padding: 0 15px;
+            animation: slideUp 1.2s ease;
+        }
+
+        .download-btn {
+            padding: 10px 25px;
+            background: #fff;
+            color: #000;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            animation: slideUp 1.4s ease;
+        }
+
+        .download-btn:hover {
+            background: #ccc;
+            transform: scale(1.1);
+        }
+
+        .features {
+            padding: 40px 15px;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 24px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .feature-card {
+            background: #111;
+            padding: 15px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .feature-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .feature-card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            font-size: 12px;
+            color: #ccc;
+        }
+
+        .cta {
+            padding: 60px 15px;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .cta h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .cta p {
+            font-size: 14px;
+            margin-bottom: 20px;
+            color: #ccc;
+        }
+
+        footer {
+            padding: 10px;
+            text-align: center;
+            background: #111;
+        }
+
+        footer p {
+            font-size: 10px;
+            color: #ccc;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 414px) { /* iPhone 12 dimensions */
+            .navbar {
+                padding: 8px 10px;
+            }
+
+            .logo {
+                font-size: 16px;
+            }
+
+            .nav-links a {
+                margin-left: 8px;
+                font-size: 10px;
+            }
+
+            .hero {
+                height: 80vh;
+                padding: 0 10px;
+            }
+
+            .hero-content h1 {
+                font-size: 28px;
+                letter-spacing: 0.8px;
+            }
+
+            .hero-content p {
+                font-size: 12px;
+                padding: 0 10px;
+            }
+
+            .download-btn {
+                padding: 8px 20px;
+                font-size: 12px;
+            }
+
+            .features {
+                padding: 30px 10px;
+            }
+
+            .features h2 {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+
+            .feature-card {
+                padding: 10px;
+            }
+
+            .feature-card img {
+                height: 120px;
+            }
+
+            .feature-card h3 {
+                font-size: 16px;
+            }
+
+            .feature-card p {
+                font-size: 11px;
+            }
+
+            .cta {
+                padding: 40px 10px;
+            }
+
+            .cta h2 {
+                font-size: 20px;
+            }
+
+            .cta p {
+                font-size: 12px;
+            }
+
+            footer p {
+                font-size: 9px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .hero-content h1 {
+                font-size: 24px;
+            }
+
+            .hero-content p {
+                font-size: 11px;
+            }
+
+            .download-btn {
+                padding: 7px 18px;
+                font-size: 11px;
+            }
+
+            .features h2 {
+                font-size: 18px;
+            }
+
+            .feature-card img {
+                height: 100px;
+            }
+
+            .feature-card h3 {
+                font-size: 14px;
+            }
+
+            .cta h2 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Arnoco</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#download">Download</a>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Arnoco Style</h1>
+            <p>Discover the ultimate men's fashion shopping experience</p>
+            <a href="assets/arnoco.apk" class="download-btn" download>Download Now</a>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <h2>Why Choose Arnoco?</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1479064555552-3ef4979f8908?q=80&w=2070&auto=format&fit=crop" alt="Stylish Outfit">
+                <h3>Curated Collections</h3>
+                <p>Handpicked stylish outfits for every occasion.</p>
+            </div>
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?q=80&w=2071&auto=format&fit=crop" alt="Fast Delivery">
+                <h3>Fast Delivery</h3>
+                <p>Get your fashion delivered to your door in no time.</p>
+            </div>
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?q=80&w=2070&auto=format&fit=crop" alt="Easy Returns">
+                <h3>Easy Returns</h3>
+                <p>Hassle-free returns for a worry-free shopping experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta" id="download">
+        <h2>Get Arnoco Now!</h2>
+        <p>Download the app and elevate your style today.</p>
+        <a href="assets/arnoco.apk" class="download-btn" download>Download Now</a>
+    </section>
+
+    <footer>
+        <p>© 2025 Arnoco. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('.nav-links a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                window.scrollTo({
+                    top: targetElement.offsetTop - 60,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
